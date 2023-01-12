@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Shawn Mendes | Tours</title>
+</head>
+<body>
+    
+    <!-- Navigation -->
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">Mendes</a>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="albumsandsongs.html">Albums & Songs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Tours</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="merchandise.html">Merchandise</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact Me</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Image, title and subtitle -->
+
+    <img src="assets/mendes5.jpeg" alt="Shawn Mendes"> 
+    
+    <br>
+    <br>
+    
+    <h1>SHAWN MENDES</h1>
+    <h3> TOURS </h3>
+    
+    <br>
+    <br>
+    
+    <!-- Adding the image with the map -->
+
+    <img src="assets/map.png" alt="Map">
+    
+    <!-- Table with the statistics -->
+
+    <div>
+        <table style="width:50%" class="centre">
+            <thead>
+                <tr>
+                    <th scope="col">5</th>
+                    <th scope="col">135</th>
+                    <th scope="col">58</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>TOURS</td>
+                    <td>CONCERTS</td>
+                    <td>CITIES</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <br>
+    <br>
+    
+    <!-- Button linking the official website to buy tickets -->
+
+    <div class="d-grid gap-2 col-5 mx-auto">
+        <a class="btn btn-primary" href="https://www.shawnmendesofficial.com/tour/#/" role="button">But Tickets</a>
+    </div>
+    
+    <br>
+    <br>
+    
+    <!-- Table with the countdown -->
+
+    <div>
+        <table class="tcountdown">
+            <tbody>
+                <tr>
+                    <td>
+                        <p id="days"></p>
+                        <script style="align-items: center;">
+                            // Set the date we're counting down to
+                            var countDownDate = new Date("Jan 5, 2024 18:30:00").getTime();
+                            
+                            // Update the count down every 1 second
+                            var x = setInterval(function() {
+                                
+                                // Get today's date and time
+                                var now = new Date().getTime();
+                                
+                                // Find the distance between now and the count down date
+                                var distance = countDownDate - now;
+                                
+                                // Time calculations for days, hours, minutes and seconds
+                                days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                                
+                                // Display the result in the element with id
+                                
+                                document.getElementById("days").innerHTML = days;
+                                
+                                // If the count down is finished, write some text 
+                                if (distance < 0) {
+                                    clearInterval(x);
+                                    document.getElementById("days").innerHTML = "HAPPENING";
+                                }
+                            }, 1000);
+                        </script>
+                    </td>
+
+                    <td>
+                        <p id="hours"></p>
+                        <script style="align-items: center;">
+                            // Set the date we're counting down to
+                            var countDownDate = new Date("Jan 5, 2024 18:30:00").getTime();
+                            
+                            // Update the count down every 1 second
+                            var x = setInterval(function() {
+                                
+                                // Get today's date and time
+                                var now = new Date().getTime();
+                                
+                                // Find the distance between now and the count down date
+                                var distance = countDownDate - now;
+                                
+                                // Time calculations for days, hours, minutes and seconds
+                                hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                                
+                                // Display the result in the element with id
+                                
+                                document.getElementById("hours").innerHTML = hours;
+                                
+                                // If the count down is finished, write some text 
+                                if (distance < 0) {
+                                    clearInterval(x);
+                                    document.getElementById("hours").innerHTML = "RIGHT";
+                                }
+                            }, 1000);
+                        </script>
+                    </td>
+
+                    <td>
+                        <p id="minutes"></p>
+                        <script style="align-items: center;">
+                            // Set the date we're counting down to
+                            var countDownDate = new Date("Jan 5, 2024 18:30:00").getTime();
+                            
+                            // Update the count down every 1 second
+                            var x = setInterval(function() {
+                                
+                                // Get today's date and time
+                                var now = new Date().getTime();
+                                
+                                // Find the distance between now and the count down date
+                                var distance = countDownDate - now;
+                                
+                                // Time calculations for days, hours, minutes and seconds
+                                minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                                
+                                // Display the result in the element with id
+                                
+                                document.getElementById("minutes").innerHTML = minutes;
+                                
+                                // If the count down is finished, write some text 
+                                if (distance < 0) {
+                                    clearInterval(x);
+                                    document.getElementById("minutes").innerHTML = "NOW";
+                                }
+                            }, 1000);
+                        </script>
+                    </td>
+
+                    <td>
+                        <p id="seconds"></p>
+                        <script style="align-items: center;">
+                            // Set the date we're counting down to
+                            var countDownDate = new Date("Jan 5, 2024 18:30:00").getTime();
+                            
+                            // Update the count down every 1 second
+                            var x = setInterval(function() {
+                                
+                                // Get today's date and time
+                                var now = new Date().getTime();
+                                
+                                // Find the distance between now and the count down date
+                                var distance = countDownDate - now;
+                                
+                                // Time calculations for days, hours, minutes and seconds
+                                seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                                // Display the result in the element with id
+                                
+                                document.getElementById("seconds").innerHTML = seconds;
+                                
+                                // If the count down is finished, write some text 
+                                if (distance < 0) {
+                                    clearInterval(x);
+                                    document.getElementById("seconds").innerHTML = "!!";
+                                }
+                            }, 1000);
+                        </script>
+                    </td>
+                </tr>
+
+                <tr class="time">
+                    <td>Days</td>
+                    <td>Hours</td>
+                    <td>Minutes</td>
+                    <td>Seconds</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <br>
+    <h3>Till the next concert</h3>
+    
+    <!-- Footer -->
+    
+    <div class="row bg-custom text-light">
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        &copy; Will &vert; 2023
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+</body>
+</html>
